@@ -12,6 +12,8 @@
 
 
             //Random Integers
+            Console.WriteLine("Random Integers");
+            Console.WriteLine();
             Console.WriteLine("Please enter a minimum value");
             min = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -23,6 +25,20 @@
                 int randomInt = generator.Next(min, max + 1);
                 Console.WriteLine($"Random Integer {i + 1}: {randomInt}");
             }
+            Console.WriteLine();
+            Console.WriteLine("Press ENTER to continue");
+            Console.ReadLine();
+            Console.Clear();
+
+            //Dice Roller
+            Console.WriteLine("Dice Roller");
+            die1 = generator.Next(1, 7);
+            die2 = generator.Next(1, 7);
+            Console.WriteLine($"You rolled a {die1} and a {die2} for a total of {die1 + die2}");
+            Console.WriteLine();
+            Console.WriteLine("Press ENTER to continue");
+            Console.ReadLine();
+            Console.Clear();
         }
     }
 }
