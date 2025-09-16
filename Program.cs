@@ -8,6 +8,7 @@
 
             //Variables
             int min, max, die1, die2;
+            double randomDouble;
 
 
 
@@ -39,6 +40,16 @@
             Console.WriteLine("Press ENTER to continue");
             Console.ReadLine();
             Console.Clear();
+
+            //Random Decimals
+            Console.WriteLine("Random Decimals");
+            Console.WriteLine();
+            for (int i = 0; i <= 2; i++)
+            {
+                randomDouble = generator.NextDouble() * ((max + 0.001) - min) + min;
+                randomDouble = Math.Round(randomDouble, 2);
+                Console.WriteLine($"{randomDouble}");
+            }
         }
     }
 }
