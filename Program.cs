@@ -16,10 +16,25 @@
             Console.WriteLine("Random Integers");
             Console.WriteLine();
             Console.WriteLine("Please enter a minimum value");
-            min = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out min))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+            }
             Console.WriteLine();
+
             Console.WriteLine("Please enter a maximum value");
-            max = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out max))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+            }   
+            while (max < min)
+            {
+                Console.WriteLine("Maximum must be greater than or equal to minimum. Please enter a valid maximum value.");
+                while (!int.TryParse(Console.ReadLine(), out max))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid integer.");
+                }
+            }
 
             for (int i = 0; i <= 5; i++)
             {
@@ -50,6 +65,11 @@
                 randomDouble = Math.Round(randomDouble, 2);
                 Console.WriteLine($"{randomDouble}");
             }
+
+
+
+            Console.WriteLine();
+            Console.WriteLine("Press ENTER to exit");
         }
     }
 }
