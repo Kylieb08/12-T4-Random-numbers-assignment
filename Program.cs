@@ -12,63 +12,63 @@
 
 
 
-            ////Random Integers
-            //Console.WriteLine("Random Integers");
-            //Console.WriteLine();
-            //Console.WriteLine("Please enter a minimum value");
-            //while (!int.TryParse(Console.ReadLine(), out min))
-            //{
-            //    Console.WriteLine("Invalid input. Please enter a valid integer.");
-            //}
-            //Console.WriteLine();
+            //Random Integers
+            Console.WriteLine("Random Integers");
+            Console.WriteLine();
+            Console.WriteLine("Please enter a minimum value");
+            while (!int.TryParse(Console.ReadLine(), out min))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+            }
+            Console.WriteLine();
 
-            //Console.WriteLine("Please enter a maximum value");
-            //while (!int.TryParse(Console.ReadLine(), out max))
-            //{
-            //    Console.WriteLine("Invalid input. Please enter a valid integer.");
-            //}   
-            //while (max < min)
-            //{
-            //    Console.WriteLine("Maximum must be greater than or equal to minimum. Please enter a valid maximum value.");
-            //    while (!int.TryParse(Console.ReadLine(), out max))
-            //    {
-            //        Console.WriteLine("Invalid input. Please enter a valid integer.");
-            //    }
-            //}
+            Console.WriteLine("Please enter a maximum value");
+            while (!int.TryParse(Console.ReadLine(), out max))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+            }
+            while (max < min)
+            {
+                Console.WriteLine("Maximum must be greater than or equal to minimum. Please enter a valid maximum value.");
+                while (!int.TryParse(Console.ReadLine(), out max))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid integer.");
+                }
+            }
 
-            //for (int i = 0; i <= 5; i++)
-            //{
-            //    int randomInt = generator.Next(min, max + 1);
-            //    Console.WriteLine($"Random Integer {i + 1}: {randomInt}");
-            //}
-            //Console.WriteLine();
-            //Console.WriteLine("Press ENTER to continue");
-            //Console.ReadLine();
-            //Console.Clear();
+            for (int i = 0; i <= 5; i++)
+            {
+                int randomInt = generator.Next(min, max + 1);
+                Console.WriteLine($"Random Integer {i + 1}: {randomInt}");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Press ENTER to continue");
+            Console.ReadLine();
+            Console.Clear();
 
-            ////Dice Roller
-            //Console.WriteLine("Dice Roller");
-            //die1 = generator.Next(1, 7);
-            //die2 = generator.Next(1, 7);
-            //Console.WriteLine($"You rolled a {die1} and a {die2} for a total of {die1 + die2}");
-            //Console.WriteLine();
-            //Console.WriteLine("Press ENTER to continue");
-            //Console.ReadLine();
-            //Console.Clear();
+            //Dice Roller
+            Console.WriteLine("Dice Roller");
+            die1 = generator.Next(1, 7);
+            die2 = generator.Next(1, 7);
+            Console.WriteLine($"You rolled a {die1} and a {die2} for a total of {die1 + die2}");
+            Console.WriteLine();
+            Console.WriteLine("Press ENTER to continue");
+            Console.ReadLine();
+            Console.Clear();
 
-            ////Random Decimals
-            //Console.WriteLine("Random Decimals");
-            //Console.WriteLine();
-            //for (int i = 0; i <= 2; i++)
-            //{
-            //    randomDouble = generator.NextDouble() * ((max + 0.001) - min) + min;
-            //    randomDouble = Math.Round(randomDouble, 2);
-            //    Console.WriteLine($"{randomDouble}");
-            //}
-            //Console.WriteLine();
-            //Console.WriteLine("Press ENTER to continue");
-            //Console.ReadLine();
-            //Console.Clear();
+            //Random Decimals
+            Console.WriteLine("Random Decimals");
+            Console.WriteLine();
+            for (int i = 0; i <= 2; i++)
+            {
+                randomDouble = generator.NextDouble() * ((max + 0.001) - min) + min;
+                randomDouble = Math.Round(randomDouble, 2);
+                Console.WriteLine($"{randomDouble}");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Press ENTER to continue");
+            Console.ReadLine();
+            Console.Clear();
 
             //Challenges 1 and 3
             Console.WriteLine("Enter a minimum value");
@@ -99,7 +99,7 @@
             Console.WriteLine();
             for (int i = 0; i <= 2; i++)
             {
-                randomDouble = generator.NextDouble() * ((maxDbl + Math.Pow(10, -decimalPlace)) - minDbl) + minDbl;
+                randomDouble = generator.NextDouble() * ((maxDbl + (1/(10* decimalPlace))) - minDbl) + minDbl;
                 //                                                  ^makes the dbl generator inclusive
                 randomDouble = Math.Round(randomDouble, decimalPlace);
                 Console.WriteLine($"{randomDouble}");
